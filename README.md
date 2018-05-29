@@ -40,6 +40,7 @@ With the test data below, fill in the “???” in the recursive CTE query so th
 https://www.postgresql.org/docs/10/static/queries-with.html
 https://www.postgresql.org/docs/10/static/functions-array.html
 
+```sql
 BEGIN;
 CREATE TABLE category (
   id SERIAL PRIMARY KEY,
@@ -65,8 +66,10 @@ SELECT id_list, name_list
 FROM last_run ???
 WHERE ORDER BY id_list;
 ROLLBACK;
+```
 The output should look like this. The id_list column should be an integer array containing ARRAY[id, parent id, grandparent id, etc]. The name_list column should be a text field containing comma separated names.
 
+```
  id_list |       name_list        
 ---------+------------------------
  {1}     | animal
@@ -80,7 +83,7 @@ The output should look like this. The id_list column should be an integer array 
  {9,3}   | lettuce, vegetable
  {10,11} | paradox1, paradox2
  {11,10} | paradox2, paradox1
-
+```
 ## QUESTION 4
 Using HTML5/CSS 3 techniques make a 100 x 100px red square that rotates via an animation 90 degrees when you click on it. You’re allowed to use a small amount of javascript but most of the animation/rotation should be accomplished using HTML5/CSS3. Include a list of which browsers it works on.
 
