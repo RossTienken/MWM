@@ -31,10 +31,10 @@ return sorted
 }
 ```
 
-QUESTION 2
+## QUESTION 2
 What are some ways to improve the security of a Unix/Linux system? Include general security guidelines and any specifics related to web servers and db servers.
 
-QUESTION 3
+## QUESTION 3
 With the test data below, fill in the “???” in the recursive CTE query so that each item in category table is listed with its parents.
 
 https://www.postgresql.org/docs/10/static/queries-with.html
@@ -80,11 +80,12 @@ The output should look like this. The id_list column should be an integer array 
  {9,3}   | lettuce, vegetable
  {10,11} | paradox1, paradox2
  {11,10} | paradox2, paradox1
-QUESTION 4
+
+## QUESTION 4
 Using HTML5/CSS 3 techniques make a 100 x 100px red square that rotates via an animation 90 degrees when you click on it. You’re allowed to use a small amount of javascript but most of the animation/rotation should be accomplished using HTML5/CSS3. Include a list of which browsers it works on.
 
-QUESTION 5
+## QUESTION 5
 In your view, what are the pros and cons of TDD (test driven development). When do you think TDD makes more/less sense (if ever)?
 
-QUESTION 6
+## QUESTION 6
 Do you have any favorite coding related quotes or cartoons?
