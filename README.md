@@ -38,6 +38,7 @@ What are some ways to improve the security of a Unix/Linux system? Include gener
 With the test data below, fill in the “???” in the recursive CTE query so that each item in category table is listed with its parents.
 
 https://www.postgresql.org/docs/10/static/queries-with.html
+
 https://www.postgresql.org/docs/10/static/functions-array.html
 
 ```sql
@@ -87,8 +88,14 @@ The output should look like this. The id_list column should be an integer array 
 ## QUESTION 4
 Using HTML5/CSS 3 techniques make a 100 x 100px red square that rotates via an animation 90 degrees when you click on it. You’re allowed to use a small amount of javascript but most of the animation/rotation should be accomplished using HTML5/CSS3. Include a list of which browsers it works on.
 
+### Solution: See index.html, main.js, and style.css
+
 ## QUESTION 5
 In your view, what are the pros and cons of TDD (test driven development). When do you think TDD makes more/less sense (if ever)?
 
 ## QUESTION 6
 Do you have any favorite coding related quotes or cartoons?
+
+```
+  Debugging is being the detective in a crime movie where you are also the murderer
+```
