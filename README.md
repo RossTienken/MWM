@@ -97,5 +97,5 @@ In your view, what are the pros and cons of TDD (test driven development). When 
 Do you have any favorite coding related quotes or cartoons?
 
 ```
-  Debugging is being the detective in a crime movie where you are also the murderer
+  "Debugging is being the detective in a crime movie where you are also the murderer"
 ```
