@@ -8,23 +8,27 @@ The month is always the first three characters of full month name
 
 The day is one or two digits (1, 2, … 31), with no preceding zero. There is always a comma after the day. The year is always four digits. Write a routine (in any language) that will order this list of strings in date descending order. Do not use any built in date-­‐parsing library… write your own specific to this date format. Feel free to use, or not use, regex.
 
-## Solution:
+### Solution:
 ```JSON
-  {
-    "Year": 1362,
-    "TSU": "",
-    "EQ": "",
-    "Name": "Oraefajokull",
-    "Location": "Iceland-SE",
-    "Country": "Iceland",
-    "Latitude": 64,
-    "Longitude": -16.65,
-    "Elevation": 2119,
-    "Type": "Stratovolcano",
-    "VEI": 5,
-    "Agent": "T,F",
-    "DEATHS": 220
-  }
+const allMonths = ['Jan','Feb','Mar', 'Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec']
+
+const sortDate = (arr) => {
+let sorted = arr.sort((a, b) => {
+  let dayA = a.slice(3,6).match(/\d/g).join('')
+  let dayB = b.slice(3, 6).match(/\d/g).join('')
+  return dayB - dayA
+}).sort((a, b) => {
+  let monthA = allMonths.indexOf(a.slice(0,3))
+  let monthB = allMonths.indexOf(b.slice(0,3))
+  return monthB - monthA
+}).sort((a, b) => {
+  let yearA = a.slice(6).match(/\d/g).join('')
+  let yearB = b.slice(6).match(/\d/g).join('')
+  return yearB - yearA
+})
+
+return sorted
+}
 ```
 
 QUESTION 2
