@@ -13,20 +13,19 @@ The day is one or two digits (1, 2, … 31), with no preceding zero. There is al
 const allMonths = ['Jan','Feb','Mar', 'Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec']
 
 const sortDate = (arr) => {
-let sorted = arr.sort((a, b) => {
-  let dayA = a.slice(3,6).match(/\d/g).join('')
-  let dayB = b.slice(3, 6).match(/\d/g).join('')
-  return dayB - dayA
-}).sort((a, b) => {
-  let monthA = allMonths.indexOf(a.slice(0,3))
-  let monthB = allMonths.indexOf(b.slice(0,3))
-  return monthB - monthA
-}).sort((a, b) => {
-  let yearA = a.slice(6).match(/\d/g).join('')
-  let yearB = b.slice(6).match(/\d/g).join('')
-  return yearB - yearA
-})
-
+  let sorted = arr.sort((a, b) => {
+    let dayA = a.slice(3,6).match(/\d/g).join('')
+    let dayB = b.slice(3, 6).match(/\d/g).join('')
+    return dayB - dayA
+  }).sort((a, b) => {
+    let monthA = allMonths.indexOf(a.slice(0,3))
+    let monthB = allMonths.indexOf(b.slice(0,3))
+    return monthB - monthA
+  }).sort((a, b) => {
+    let yearA = a.slice(6).match(/\d/g).join('')
+    let yearB = b.slice(6).match(/\d/g).join('')
+    return yearB - yearA
+  })
 return sorted
 }
 ```
