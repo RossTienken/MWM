@@ -26,7 +26,7 @@ const sortDate = (arr) => {
     let yearB = b.slice(6).match(/\d/g).join('')
     return yearB - yearA
   })
-return sorted
+  return sorted
 }
 ```
 
