@@ -92,6 +92,14 @@ Using HTML5/CSS 3 techniques make a 100 x 100px red square that rotates via an a
 ## QUESTION 5
 In your view, what are the pros and cons of TDD (test driven development). When do you think TDD makes more/less sense (if ever)?
 
+```
+I feel like TDD is very important in maintaining and monitoring a strong application of any sort. TDD can be vital in ensuring that developers stay along the script, as well as giving them a very distinct guideline to follow. I believe that it also keeps the end product as close to the original idea as possible, as well as allowing for some room to be creative with code.
+
+One on the cons to TDD though, is that it can make it more difficult to assess when you have run into a problem that may require for the test to change in order to adequately do what was intended.
+
+Overall I believe that Test Driven Development plays a colossal part in the creation of successful and (hopefully) bug free code.
+```
+
 ## QUESTION 6
 Do you have any favorite coding related quotes or cartoons?
 
