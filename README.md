@@ -88,7 +88,7 @@ The output should look like this. The id_list column should be an integer array 
  {11,10} | paradox2, paradox1
 ```
 
-###Solution:
+### Solution:
 ```sql
 BEGIN;
 CREATE TABLE category (
