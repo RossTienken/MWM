@@ -33,6 +33,9 @@ const sortDate = (arr) => {
 ## QUESTION 2
 What are some ways to improve the security of a Unix/Linux system? Include general security guidelines and any specifics related to web servers and db servers.
 
+### Solution:
+
+
 ## QUESTION 3
 With the test data below, fill in the “???” in the recursive CTE query so that each item in category table is listed with its parents.
 
@@ -84,6 +87,42 @@ The output should look like this. The id_list column should be an integer array 
  {10,11} | paradox1, paradox2
  {11,10} | paradox2, paradox1
 ```
+
+###Solution:
+```sql
+BEGIN;
+CREATE TABLE category (
+  id SERIAL PRIMARY KEY,
+  parent_id INTEGER REFERENCES category(id) DEFERRABLE,
+  name TEXT NOT NULL UNIQUE );
+SET CONSTRAINTS ALL DEFERRED;
+INSERT INTO category VALUES (1, NULL, 'animal');
+INSERT INTO category VALUES (2, NULL, 'mineral');
+INSERT INTO category VALUES (3, NULL, 'vegetable');
+INSERT INTO category VALUES (4, 1, 'dog');
+INSERT INTO category VALUES (5, 1, 'cat');
+INSERT INTO category VALUES (6, 4, 'doberman');
+INSERT INTO category VALUES (7, 4, 'dachshund');
+INSERT INTO category VALUES (8, 3, 'carrot');
+INSERT INTO category VALUES (9, 3, 'lettuce');
+INSERT INTO category VALUES (10, 11, 'paradox1');
+INSERT INTO category VALUES (11, 10, 'paradox2');
+SELECT setval('category_id_seq', (select max(id) from category));
+
+WITH RECURSIVE last_run(parent_id, id_list, name_list) AS (
+SELECT parent_id, ARRAY[id], name
+FROM category
+UNION ALL
+SELECT c."parent_id", id_list || c."id", name_list || ', ' || c."name"
+FROM "category" AS c, "last_run" AS r
+WHERE c."id" = r."parent_id"
+)
+SELECT id_list, name_list FROM last_run
+WHERE parent_id IS NULL
+ORDER BY id_list;
+ROLLBACK;
+```
+
 ## QUESTION 4
 Using HTML5/CSS 3 techniques make a 100 x 100px red square that rotates via an animation 90 degrees when you click on it. You’re allowed to use a small amount of javascript but most of the animation/rotation should be accomplished using HTML5/CSS3. Include a list of which browsers it works on.
 
