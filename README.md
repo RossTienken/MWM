@@ -34,6 +34,10 @@ const sortDate = (arr) => {
 What are some ways to improve the security of a Unix/Linux system? Include general security guidelines and any specifics related to web servers and db servers.
 
 ### Solution:
+One of the main ways to improve security is to constantly utilize https. Using this helps by validating and installing and SSL certificate, and can strengthen security of web servers.
+Another important thing is to minimize packages. The more packages that are used, the more vulnerable you become.
+One of the most important things to do is to keep everything up to date. Maintaining the system to make sure that things are up to date is vital, and when things are out of date they are a lot more likely to get compromised.
+A way to make sure that a db is more secure is also to have strict guidelines for information users enter. Specifically password requirements. If there are strict guidelines it will minimize the opportunity for someone to de-encrypt users information and access their accounts.
 
 
 ## QUESTION 3
@@ -122,6 +126,8 @@ WHERE parent_id IS NULL
 ORDER BY id_list;
 ROLLBACK;
 ```
+
+I worked vigorously on this problem, but I cannot get it to output the paradox. I know that because it tries to call on something before it is created it cannot access that information. Without the paradox the code works perfectly.
 
 ## QUESTION 4
 Using HTML5/CSS 3 techniques make a 100 x 100px red square that rotates via an animation 90 degrees when you click on it. You’re allowed to use a small amount of javascript but most of the animation/rotation should be accomplished using HTML5/CSS3. Include a list of which browsers it works on.
